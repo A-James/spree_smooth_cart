@@ -2,20 +2,31 @@
 
 var cartInjected = false;
 
-$(document).on('page:load ready', function () {
-
-$('.cart-info').on('click', function(){
+function openCart(){
   if (cartInjected === false) {
-    console.log('foo');
     $('body').append("<div id=\"cartbody\"><iframe src=\"/cart\" seamless></iframe></div>");
     cartInjected = true;
   }
-  $('body').toggleClass('cart-open');
-  return false;
-});
+  // set time out to allow time for CSS transition before state
+  setTimeout(function(){
+    $('body').toggleClass('cart-open');
+  },10);
+}
 
-$('#pagebody').on('click', function(){
+function closeCart(){
   $('body').removeClass('cart-open');
-});
+}
+
+$(document).on('page:load ready', function () {
+
+  $('.cart-info').on('click', function(){
+    openCart();
+    return false;
+  });
+
+  $('#pagebody').on('click', function(){
+    closeCart();
+    return false;
+  });
 
 });

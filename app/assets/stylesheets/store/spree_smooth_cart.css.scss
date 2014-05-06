@@ -1,31 +1,93 @@
-// -- temp cart ----------------------------------------------
+// -- Cart ----------------------------------------------
 
 #pagebody {
   @include transition(all .7s ease-in-out);
 }
 #cartbody {
-  width: 600px;
-  background: #fff;
+  background: image-url('spinner.gif') center center no-repeat #fff;
   height: 100%;
   position: fixed;
-  right: -650px;
   top: 0;
   border-left: 1px solid #c0c0c0;
   @include box-shadow(0 0 50px rgba(0,0,0,.2));
   @include transition(all .7s ease-in-out);
 
   iframe {
-    width: 600px;
     height: 100%;
     border: 0;
   }
 }
 .cart-open {
   #pagebody {
-    margin-left: -600px;
     opacity: .6;
   }
   #cartbody {
     right: 0;
   }
+}
+
+// -- Responsive --------------------------------------
+
+//xs
+
+  #cartbody {
+    width: 400px;
+    right: -450px;
+
+    iframe {
+      width: 400px;
+    }
+  }
+  .cart-open #pagebody {
+    margin-left: -400px;
+  }
+
+
+@media (min-width: $screen-sm) { 
+
+  #cartbody {
+    width: 600px;
+    right: -650px;
+
+    iframe {
+      width: 600px;
+    }
+  }
+  .cart-open #pagebody {
+    margin-left: -600px;
+  }
+
+}
+
+@media (min-width: $screen-md) { 
+
+  #cartbody {
+    width: 700px;
+    right: -750px;
+
+    iframe {
+      width: 700px;
+    }
+  }
+  .cart-open #pagebody {
+    margin-left: -700px;
+  }
+
+}
+
+
+@media (min-width: $screen-lg) { 
+
+  #cartbody {
+    width: 800px;
+    right: -850px;
+
+    iframe {
+      width: 800px;
+    }
+  }
+  .cart-open #pagebody {
+    margin-left: -800px;
+  }
+
 }
