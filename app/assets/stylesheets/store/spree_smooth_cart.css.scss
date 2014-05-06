@@ -1,7 +1,3 @@
-/*
- *= require store/spree_frontend
-*/
-
 // -- temp cart ----------------------------------------------
 
 #pagebody {
@@ -27,7 +23,7 @@
 .cart-open {
   #pagebody {
     margin-left: -600px;
-    opacity: .7;
+    opacity: .6;
   }
   #cartbody {
     right: 0;
