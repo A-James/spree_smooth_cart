@@ -26,6 +26,17 @@
   }
 }
 
+#checkout-link {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 95%;
+  padding: 30px;
+  margin: 20px;
+  z-index: 99;
+}
+
+
 // -- Responsive --------------------------------------
 
 //xs
