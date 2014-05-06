@@ -1,0 +1,35 @@
+/*
+ *= require store/spree_frontend
+*/
+
+// -- temp cart ----------------------------------------------
+
+#pagebody {
+  @include transition(all .7s ease-in-out);
+}
+#cartbody {
+  width: 600px;
+  background: #fff;
+  height: 100%;
+  position: fixed;
+  right: -650px;
+  top: 0;
+  border-left: 1px solid #c0c0c0;
+  @include box-shadow(0 0 50px rgba(0,0,0,.2));
+  @include transition(all .7s ease-in-out);
+
+  iframe {
+    width: 600px;
+    height: 100%;
+    border: 0;
+  }
+}
+.cart-open {
+  #pagebody {
+    margin-left: -600px;
+    opacity: .7;
+  }
+  #cartbody {
+    right: 0;
+  }
+}
