@@ -26,7 +26,6 @@ $(document).on('page:load ready', function () {
 
   $('#pagebody').on('click', function(){
     closeCart();
-    return false;
   });
 
 });
