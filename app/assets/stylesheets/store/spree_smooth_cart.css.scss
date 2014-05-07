@@ -34,6 +34,7 @@
   padding: 30px;
   margin: 20px;
   z-index: 99;
+  background: image-url('checkout-arrow.png');
 }
 
 
@@ -44,6 +45,7 @@
   #cartbody {
     width: 400px;
     right: -450px;
+    z-index: 3;
 
     iframe {
       width: 400px;

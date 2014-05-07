@@ -4,7 +4,7 @@ var cartInjected = false;
 
 function openCart(){
   if (cartInjected === false) {
-    $('body').append("<div id=\"cartbody\"><iframe src=\"/cart\" seamless></iframe></div>");
+    $('body').append("<div id=\"cartbody\"><iframe name=\"cart_target\" src=\"/cart\" seamless></iframe></div>");
     cartInjected = true;
   }
   // set time out to allow time for CSS transition before state
@@ -24,8 +24,15 @@ $(document).on('page:load ready', function () {
     return false;
   });
 
+  $('.add-to-cart-button').on('click', function(){
+    openCart();
+  });
+  
+
   $('#pagebody').on('click', function(){
     closeCart();
   });
+
+  $('#update-cart').attr('target','_parent');
 
 });
