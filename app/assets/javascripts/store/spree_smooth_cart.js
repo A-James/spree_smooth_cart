@@ -19,20 +19,24 @@ function closeCart(){
 
 $(document).on('page:load ready', function () {
 
-  $('.cart-info').on('click', function(){
-    openCart();
-    return false;
-  });
+  if( !/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
 
-  $('.add-to-cart-button').on('click', function(){
-    openCart();
-  });
-  
+    $('.cart-info').on('click', function(){
+      openCart();
+      return false;
+    });
 
-  $('#pagebody').on('click', function(){
-    closeCart();
-  });
+    $('.add-to-cart-button').on('click', function(){
+      openCart();
+    });
+    
 
-  $('#update-cart').attr('target','_parent');
+    $('#pagebody').on('click', function(){
+      closeCart();
+    });
+
+    $('#update-cart').attr('target','_parent');
+
+  }
 
 });
