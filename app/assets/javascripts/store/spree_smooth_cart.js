@@ -29,7 +29,8 @@ $(document).on('page:load ready', function () {
     $('.add-to-cart-button').on('click', function(){
       openCart();
     });
-    
+
+    $('#buy-button').attr('target','cart_target');
 
     $('#pagebody').on('click', function(){
       closeCart();
