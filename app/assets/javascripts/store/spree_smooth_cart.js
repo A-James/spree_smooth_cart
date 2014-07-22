@@ -28,14 +28,12 @@ $(document).on('page:load ready', function () {
 
     $('.add-to-cart-button').on('click', function(){
       openCart();
-      return false;
     });
 
     $('#buy-button').attr('target','cart_target');
 
     $('#pagebody').on('click', function(){
       closeCart();
-      return false;
     });
 
     $('#update-cart').attr('target','_parent');
